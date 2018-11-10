@@ -22,6 +22,10 @@ public class animalController : MonoBehaviour {
     private bool isMoving = true;
 
     private Vector3 lastpos;
+    private Vector3 movementVector = new Vector3();
+
+    private int points;
+
 
     private Rigidbody rb;
 
@@ -53,7 +57,7 @@ public class animalController : MonoBehaviour {
     {
         if (isMoving)
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            rb.velocity = new Vector3(0, 0, speed);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -117,6 +121,7 @@ public class animalController : MonoBehaviour {
             if(this.tag == "Piggy" || this.tag == "Bunny")
             {
                 Destroy(col.gameObject);
+                points += 1; 
                 Debug.Log("ate carrot");
             }
         }
@@ -126,8 +131,16 @@ public class animalController : MonoBehaviour {
             if(this.tag == "Piggy" || this.tag == "Mouse")
             {
                 Destroy(col.gameObject);
-                Debug.Log("at cheese");
+                points += 2;
+                Debug.Log("ate cheese");
             }
+        }
+
+        if (col.gameObject.tag == "Garbage")
+        {
+            Destroy(col.gameObject);
+            points--;
+            Debug.Log("ate garbage");
         }
     }
 
@@ -178,5 +191,6 @@ public class animalController : MonoBehaviour {
     {
         transform.position = new Vector3(0, 0, 0);
         isMoving = true;
+
     }
 }
