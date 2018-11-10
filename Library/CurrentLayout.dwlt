@@ -109,7 +109,15 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 613}
   m_MaxSize: {x: 18006, y: 18063}
   vertical: 0
+<<<<<<< HEAD
   controlID: 11
+=======
+<<<<<<< HEAD
+  controlID: 11
+=======
+  controlID: 151
+>>>>>>> be4e7e979d6dad2b04278868624d127b60080872
+>>>>>>> 912c47da77ae123f3c68ba84ac0982e94d05be64
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +141,15 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 613}
   m_MaxSize: {x: 14006, y: 18063}
   vertical: 1
+<<<<<<< HEAD
   controlID: 12
+=======
+<<<<<<< HEAD
+  controlID: 12
+=======
+  controlID: 37
+>>>>>>> be4e7e979d6dad2b04278868624d127b60080872
+>>>>>>> 912c47da77ae123f3c68ba84ac0982e94d05be64
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +173,15 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 13
+=======
+<<<<<<< HEAD
+  controlID: 13
+=======
+  controlID: 38
+>>>>>>> be4e7e979d6dad2b04278868624d127b60080872
+>>>>>>> 912c47da77ae123f3c68ba84ac0982e94d05be64
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,8 +249,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 390
+    height: 437
+=======
     width: 234
     height: 234
+>>>>>>> be4e7e979d6dad2b04278868624d127b60080872
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 18}
@@ -479,13 +508,31 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: 0.26747712, y: -0.028901754, z: 0.008026811, w: 0.9631017}
+=======
+<<<<<<< HEAD
+    m_Target: {x: -0.15342306, y: 0.25105453, z: -0.040337157, w: -0.95488626}
+    speed: 2
+    m_Value: {x: -0.1534229, y: 0.2510543, z: -0.04033712, w: -0.95488536}
+  m_Size:
+    m_Target: 42.147083
+    speed: 2
+    m_Value: 42.147083
+=======
+    m_Target: {x: -0.45000774, y: -0.13647814, z: 0.06980953, w: -0.879769}
+>>>>>>> 912c47da77ae123f3c68ba84ac0982e94d05be64
     speed: 2
     m_Value: {x: 0.26747596, y: -0.02890163, z: 0.008026777, w: 0.9630976}
   m_Size:
     m_Target: 142.74239
     speed: 2
+<<<<<<< HEAD
     m_Value: 142.74239
+=======
+    m_Value: 59.059235
+>>>>>>> be4e7e979d6dad2b04278868624d127b60080872
+>>>>>>> 912c47da77ae123f3c68ba84ac0982e94d05be64
   m_Ortho:
     m_Target: 1
     speed: 2

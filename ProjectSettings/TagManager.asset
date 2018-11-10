@@ -8,6 +8,7 @@ TagManager:
   - Mouse
   - Bunny
   - Floor
+  - Rock
   layers:
   - Default
   - TransparentFX
