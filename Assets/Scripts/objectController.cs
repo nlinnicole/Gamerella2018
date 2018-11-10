@@ -13,4 +13,16 @@ public class objectController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.tag != "Piggy")
+        {
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        } else
+        {
+            //rock breaking animation
+            transform.position = new Vector3 (transform.position.x, transform.position.y + 10, transform.position.z);
+        }
+    }
 }
