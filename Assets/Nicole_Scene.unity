@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30194e4321a5dd64a80cee02f3a6fd7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pigJump: 1
+  pigJump: 10
   bunnyJump: 2
   mouseJump: 0
   pigSpeed: 5
