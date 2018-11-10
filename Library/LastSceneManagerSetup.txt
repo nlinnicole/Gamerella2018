@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Mainscene.unity
+- path: Assets/Nicole_Scene.unity
   isLoaded: 1
   isActive: 1

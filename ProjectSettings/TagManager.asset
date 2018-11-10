@@ -9,6 +9,7 @@ TagManager:
   - Bunny
   - Floor
   - Rock
+  - Carrot
   layers:
   - Default
   - TransparentFX

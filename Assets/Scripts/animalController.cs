@@ -15,11 +15,13 @@ public class animalController : MonoBehaviour {
     private float jumpForce;
     private Vector3 jump;
 
-    private bool isGounded;
+    private bool isGounded = true;
 
     private int animalType = 0;
     private bool isChanged = false;
     private bool isMoving = true;
+
+    private Vector3 lastpos;
 
     private Rigidbody rb;
 
@@ -67,6 +69,11 @@ public class animalController : MonoBehaviour {
             position.x++;
             this.transform.position = position;
         }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            switchAnimalType();
+        }
     }
 
     void OnCollisionEnter(Collision col)
@@ -79,15 +86,47 @@ public class animalController : MonoBehaviour {
                 switchAnimalType();
                 checkAnimalType();
             }
-
+            reset();
         }
 
         if (col.gameObject.tag == "Rock")
         {
-            if (this.tag == "Piggy")
+            
+        }
+
+        if (col.gameObject.tag == "Bush")
+        {
+            if (this.tag == "Piggy" || this.tag == "Bunny")
             {
                 Destroy(col.gameObject);
-                Debug.Log("ate rock");
+                Debug.Log("ate bush");
+            }
+        }
+
+        if (col.gameObject.tag == "Log")
+        {
+            if (this.tag == "Rat")
+            {
+                Destroy(col.gameObject);
+                Debug.Log("under log");
+            }
+        }
+
+        if (col.gameObject.tag == "Carrot")
+        {
+            if(this.tag == "Piggy" || this.tag == "Bunny")
+            {
+                Destroy(col.gameObject);
+                Debug.Log("ate carrot");
+            }
+        }
+
+        if (col.gameObject.tag == "Cheese")
+        {
+            if(this.tag == "Piggy" || this.tag == "Mouse")
+            {
+                Destroy(col.gameObject);
+                Debug.Log("at cheese");
             }
         }
     }
@@ -98,16 +137,19 @@ public class animalController : MonoBehaviour {
         if (animalType == 0)
         {
             animalType = 1;
+            this.tag = "Bunny";
             Debug.Log("changed to bunny");
         }
         else if (animalType == 1)
         {
             animalType = 2;
+            this.tag = "Mouse";
             Debug.Log("changed to mouse");
         }
         else if (animalType == 2)
         {
             animalType = 0;
+            this.tag = "Piggy";
             Debug.Log("changed to piggy");
         }
         checkAnimalType();
@@ -130,5 +172,11 @@ public class animalController : MonoBehaviour {
             jumpForce = mouseJump;
             speed = mouseSpeed;
         }
+    }
+
+    void reset()
+    {
+        transform.position = new Vector3(0, 0, 0);
+        isMoving = true;
     }
 }
