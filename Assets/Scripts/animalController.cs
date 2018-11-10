@@ -57,7 +57,6 @@ public class animalController : MonoBehaviour {
     {
         if (isMoving)
         {
-            //rb.velocity = new Vector3(0, 0, speed);
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * speed);
         }
 
