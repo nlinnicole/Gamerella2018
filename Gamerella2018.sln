@@ -1,12 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamerella2018", "Gamerella2018.csproj", "{2EED48A8-3729-2A11-717D-6C97C8346E64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EED48A8-3729-2A11-717D-6C97C8346E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EED48A8-3729-2A11-717D-6C97C8346E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EED48A8-3729-2A11-717D-6C97C8346E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EED48A8-3729-2A11-717D-6C97C8346E64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
