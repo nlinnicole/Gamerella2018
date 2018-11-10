@@ -30,7 +30,11 @@ public class animalController : MonoBehaviour {
             position.x++;
             this.transform.position = position;
         }
-    
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.up * jump;
+        }
 		
 	}
 }

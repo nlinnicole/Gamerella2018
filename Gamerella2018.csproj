@@ -302,6 +302,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\animalController.cs" />
     <Compile Include="Assets\Scripts\cameraConroller.cs" />
+    <Compile Include="Assets\Scripts\objectController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
