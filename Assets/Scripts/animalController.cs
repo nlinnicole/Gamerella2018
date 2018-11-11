@@ -108,7 +108,7 @@ public class animalController : MonoBehaviour {
 
         if (col.gameObject.tag == "Rock")
         {
-            
+            reset();
         }
 
         if (col.gameObject.tag == "Bush")
@@ -117,6 +117,9 @@ public class animalController : MonoBehaviour {
             {
                 Destroy(col.gameObject);
                 Debug.Log("ate bush");
+            } else
+            {
+                reset();
             }
         }
 
@@ -126,6 +129,10 @@ public class animalController : MonoBehaviour {
             {
                 Destroy(col.gameObject);
                 Debug.Log("under log");
+            }
+            else
+            {
+                reset();
             }
         }
 

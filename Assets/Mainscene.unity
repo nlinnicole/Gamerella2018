@@ -7250,18 +7250,6 @@ Prefab:
       propertyPath: m_Name
       value: Rock (19)
       objectReference: {fileID: 0}
-    - target: {fileID: 4267982739267670, guid: aedb98418195de1469347fdda0e6d036, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.6665357
-      objectReference: {fileID: 0}
-    - target: {fileID: 4267982739267670, guid: aedb98418195de1469347fdda0e6d036, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.5984076
-      objectReference: {fileID: 0}
-    - target: {fileID: 4267982739267670, guid: aedb98418195de1469347fdda0e6d036, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.9999998
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aedb98418195de1469347fdda0e6d036, type: 2}
   m_IsPrefabParent: 0
@@ -7843,18 +7831,6 @@ Prefab:
     - target: {fileID: 1490905089870634, guid: aedb98418195de1469347fdda0e6d036, type: 2}
       propertyPath: m_Name
       value: Rock (20)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4267982739267670, guid: aedb98418195de1469347fdda0e6d036, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0000048
-      objectReference: {fileID: 0}
-    - target: {fileID: 4267982739267670, guid: aedb98418195de1469347fdda0e6d036, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.5984076
-      objectReference: {fileID: 0}
-    - target: {fileID: 4267982739267670, guid: aedb98418195de1469347fdda0e6d036, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.9999998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aedb98418195de1469347fdda0e6d036, type: 2}
