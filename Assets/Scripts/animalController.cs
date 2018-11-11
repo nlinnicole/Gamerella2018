@@ -22,7 +22,6 @@ public class animalController : MonoBehaviour {
     private bool isMoving = true;
 
     private Vector3 lastpos;
-    private Vector3 movementVector = new Vector3();
 
     private int points;
 
@@ -123,6 +122,7 @@ public class animalController : MonoBehaviour {
                 Destroy(col.gameObject);
                 points += 1; 
                 Debug.Log("ate carrot");
+                Debug.Log(points);
             }
         }
 
@@ -133,6 +133,7 @@ public class animalController : MonoBehaviour {
                 Destroy(col.gameObject);
                 points += 2;
                 Debug.Log("ate cheese");
+                Debug.Log(points);
             }
         }
 
@@ -141,6 +142,7 @@ public class animalController : MonoBehaviour {
             Destroy(col.gameObject);
             points--;
             Debug.Log("ate garbage");
+            Debug.Log(points);
         }
     }
 

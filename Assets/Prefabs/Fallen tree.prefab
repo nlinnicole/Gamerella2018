@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23881624334749630}
   m_Layer: 0
   m_Name: Fallen tree
-  m_TagString: Untagged
+  m_TagString: Log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
