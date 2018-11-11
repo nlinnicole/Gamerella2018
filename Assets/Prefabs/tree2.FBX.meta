@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 1403a62a7c356fc4980644c6eb197131
-timeCreated: 1541956106
+guid: 7a6984e73ecb97e4fb611538ae3b659e
+timeCreated: 1541957129
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 02 - Default
+    2100000: 03 - Default
     2300000: //RootNode
     3300000: //RootNode
     4300000: ZBrush_defualt_group

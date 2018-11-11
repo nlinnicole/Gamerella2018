@@ -15,17 +15,20 @@ public class animalController : MonoBehaviour {
     private float jumpForce;
     private Vector3 jump;
 
-    private bool isGounded = true;
+    private bool isGrounded = true;
 
     private int animalType = 0;
     private bool isChanged = false;
     private bool isMoving = true;
+    private bool isJumping = false;
 
     private Vector3 lastpos;
 
     private GameObject piggy;
     private GameObject bunny;
     private GameObject mouse;
+
+    private float originalHeight;
 
     private int points;
 
@@ -44,47 +47,61 @@ public class animalController : MonoBehaviour {
         piggy.SetActive(true);
         bunny.SetActive(false);
         mouse.SetActive(false);
+
+        originalHeight = transform.position.y;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space) && isGounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-            isGounded = false;
+            isGrounded = false;
+            isJumping = true;
         } else
         {
             Move();
         }
         checkAnimalType();
+        if (transform.position.y > originalHeight)
+        {
+            isJumping = true;
+        } else
+        {
+            isJumping = false;
+        }
 	}
 
     private void OnCollisionStay()
     {
-        isGounded = true;
+        isGrounded = true;
     }
 
     void Move()
     {
+        isGrounded = false;
         if (isMoving)
         {
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * speed);
         }
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (!isJumping)
         {
-            Vector3 position = this.transform.position;
-            position.x--;
-            this.transform.position = position;
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                Vector3 position = this.transform.position;
+                position.x--;
+                this.transform.position = position;
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                Vector3 position = this.transform.position;
+                position.x++;
+                this.transform.position = position;
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Vector3 position = this.transform.position;
-            position.x++;
-            this.transform.position = position;
-        }
-
+        
         if (Input.GetKeyDown(KeyCode.S))
         {
             switchAnimalType();
@@ -125,7 +142,7 @@ public class animalController : MonoBehaviour {
 
         if (col.gameObject.tag == "Log")
         {
-            if (this.tag == "Rat")
+            if (this.tag == "Mouse")
             {
                 Destroy(col.gameObject);
                 Debug.Log("under log");
@@ -223,6 +240,7 @@ public class animalController : MonoBehaviour {
 
     void reset()
     {
+        Debug.Log("reset");
         this.transform.position = new Vector3(1, 1, 180);
         isMoving = true;
         isChanged = false;
