@@ -95,9 +95,11 @@ public class animalController : MonoBehaviour {
     {
         if(col.gameObject.tag == "Floor")
         {
+            Debug.Log("hit floor");
             isMoving = false;
             if (!isChanged)
             {
+                isChanged = true;
                 switchAnimalType();
                 checkAnimalType();
             }
@@ -160,7 +162,6 @@ public class animalController : MonoBehaviour {
 
     void switchAnimalType()
     {
-        isChanged = true;
         if (animalType == 0)
         {
             animalType = 1;
@@ -168,6 +169,7 @@ public class animalController : MonoBehaviour {
             bunny.SetActive(true);
             piggy.SetActive(false);
             mouse.SetActive(false);
+            Debug.Log(animalType);
             Debug.Log("changed to bunny");
         }
         else if (animalType == 1)
@@ -177,6 +179,7 @@ public class animalController : MonoBehaviour {
             mouse.SetActive(true);
             bunny.SetActive(false);
             piggy.SetActive(false);
+            Debug.Log(animalType);
             Debug.Log("changed to mouse");
         }
         else if (animalType == 2)
@@ -186,6 +189,7 @@ public class animalController : MonoBehaviour {
             piggy.SetActive(true);
             bunny.SetActive(false);
             mouse.SetActive(false);
+            Debug.Log(animalType);
             Debug.Log("changed to piggy");
         }
         checkAnimalType();
@@ -212,8 +216,8 @@ public class animalController : MonoBehaviour {
 
     void reset()
     {
-        transform.position = new Vector3(0, 0, 0);
+        this.transform.position = new Vector3(1, 1, 180);
         isMoving = true;
-
+        isChanged = false;
     }
 }

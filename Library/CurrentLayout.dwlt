@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 54
+  controlID: 37
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 613}
   m_MaxSize: {x: 18008, y: 18063}
   vertical: 0
-  controlID: 26
+  controlID: 34
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 613}
   m_MaxSize: {x: 14006, y: 18063}
   vertical: 1
-  controlID: 27
+  controlID: 35
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 0
-  controlID: 28
+  controlID: 36
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -375,19 +375,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Nicole\Documents\Gamerella2018
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ec290000
-    m_LastClickedID: 10732
-    m_ExpandedIDs: 00000000b229000000ca9a3bffffff7f
+    m_SelectedIDs: 64270000
+    m_LastClickedID: 10084
+    m_ExpandedIDs: 000000006427000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -415,7 +415,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b2290000
+    m_ExpandedIDs: 0000000064270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -446,15 +446,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300000a7affff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: animalController
-      m_OriginalName: animalController
+      m_Name: Nicole_Scene
+      m_OriginalName: Nicole_Scene
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 1704
+      m_UserData: 10156
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -532,10 +532,10 @@ MonoBehaviour:
     height: 364
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 300}
-    m_SelectedIDs: baedffff
-    m_LastClickedID: -4678
-    m_ExpandedIDs: 60f3ffff00000000ce2d0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 7a6ffbff
+    m_LastClickedID: -299142
+    m_ExpandedIDs: 7e6afbff7a6ffbffec70fbffa472fbff4e79fbff22a1fbff9aabfbff58ecfbff125bfcfff8defcff7ee7fcff20bcfdffccddfdff7621ffff642dffff2a41ffff1651ffff9efbffff00000000fc2b0000688a00005c1701006a2601002c870100ec9501009eb90100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -586,14 +586,14 @@ MonoBehaviour:
     height: 875
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 599.9409323047948
+  lastFramingTime: 5136.807095992275
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.88795, y: 1.6345577, z: 187.27577}
+    m_Target: {x: 1.3, y: 0.21899986, z: 180.7}
     speed: 2
-    m_Value: {x: 4.88795, y: 1.6345577, z: 187.27577}
+    m_Value: {x: 1.3, y: 0.21899986, z: 180.7}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -617,13 +617,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.18998778, y: 0.47344586, z: -0.10537464, w: -0.85361004}
+    m_Target: {x: -0.16014463, y: 0.2539057, z: -0.04267043, w: -0.9529241}
     speed: 2
-    m_Value: {x: -0.18998775, y: 0.4734458, z: -0.10537463, w: -0.8536099}
+    m_Value: {x: -0.16014467, y: 0.2539058, z: -0.04267044, w: -0.9529244}
   m_Size:
-    m_Target: 15.832377
+    m_Target: 9.250387
     speed: 2
-    m_Value: 15.832377
+    m_Value: 9.250387
   m_Ortho:
     m_Target: 0
     speed: 2
