@@ -4,19 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Piggy
-  - Mouse
-  - Bunny
-  - Floor
-  - Rock
-  - Carrot
-<<<<<<< HEAD
-=======
-  - Cheese
+  - Bush
   - Log
   - Garbage
->>>>>>> 4057b4e857bb18fd1efc3714f4d6765fd77f8797
-  - Bush
+  - Cheese
+  - Piggy
+  - Rock
+  - Carrot
   layers:
   - Default
   - TransparentFX
