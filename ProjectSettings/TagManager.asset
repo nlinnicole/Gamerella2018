@@ -11,6 +11,9 @@ TagManager:
   - Piggy
   - Rock
   - Carrot
+  - Floor
+  - Bunny
+  - Mouse
   layers:
   - Default
   - TransparentFX

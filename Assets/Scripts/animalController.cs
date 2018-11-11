@@ -23,6 +23,10 @@ public class animalController : MonoBehaviour {
 
     private Vector3 lastpos;
 
+    private GameObject piggy;
+    private GameObject bunny;
+    private GameObject mouse;
+
     private int points;
 
 
@@ -32,6 +36,14 @@ public class animalController : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 3.0f, 0.0f);
+
+        piggy = this.gameObject.transform.GetChild(0).gameObject;
+        bunny = this.gameObject.transform.GetChild(1).gameObject;
+        mouse = this.gameObject.transform.GetChild(2).gameObject;
+
+        piggy.SetActive(true);
+        bunny.SetActive(false);
+        mouse.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -153,18 +165,27 @@ public class animalController : MonoBehaviour {
         {
             animalType = 1;
             this.tag = "Bunny";
+            bunny.SetActive(true);
+            piggy.SetActive(false);
+            mouse.SetActive(false);
             Debug.Log("changed to bunny");
         }
         else if (animalType == 1)
         {
             animalType = 2;
             this.tag = "Mouse";
+            mouse.SetActive(true);
+            bunny.SetActive(false);
+            piggy.SetActive(false);
             Debug.Log("changed to mouse");
         }
         else if (animalType == 2)
         {
             animalType = 0;
             this.tag = "Piggy";
+            piggy.SetActive(true);
+            bunny.SetActive(false);
+            mouse.SetActive(false);
             Debug.Log("changed to piggy");
         }
         checkAnimalType();
