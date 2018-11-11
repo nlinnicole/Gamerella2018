@@ -62,7 +62,7 @@ public class animalController : MonoBehaviour {
             Move();
         }
         checkAnimalType();
-        if (transform.position.y > originalHeight)
+        if (transform.position.y + 5 > originalHeight)
         {
             Debug.Log("is jumping");
             isJumping = true;
