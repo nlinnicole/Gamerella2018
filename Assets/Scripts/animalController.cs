@@ -57,12 +57,12 @@ public class animalController : MonoBehaviour {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
             isJumping = true;
-        } else
+        } else 
         {
             Move();
         }
         checkAnimalType();
-        if (transform.position.y + 5 > originalHeight)
+        if (transform.position.y > originalHeight)
         {
             Debug.Log("is jumping");
             isJumping = true;
@@ -84,8 +84,7 @@ public class animalController : MonoBehaviour {
         {
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * speed);
         }
-        if (!isJumping)
-        {
+
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 Vector3 position = this.transform.position;
@@ -98,7 +97,7 @@ public class animalController : MonoBehaviour {
                 Vector3 position = this.transform.position;
                 position.x++;
                 this.transform.position = position;
-            }
+            
         }
 
 
@@ -128,12 +127,12 @@ public class animalController : MonoBehaviour {
             reset();
         }
 
-        if (col.gameObject.tag == "Bush")
+        if (col.gameObject.tag == "Mushroom")
         {
             if (this.tag == "Piggy" || this.tag == "Bunny")
             {
                 Destroy(col.gameObject);
-                Debug.Log("ate bush");
+                Debug.Log("ate mushroom");
             } else
             {
                 reset();
@@ -238,7 +237,7 @@ public class animalController : MonoBehaviour {
     void reset()
     {
         Debug.Log("reset");
-        this.transform.position = new Vector3(1, 1, 180);
+        this.transform.position = new Vector3(1, 1, 147);
         isMoving = true;
         isChanged = false;
     }
@@ -250,6 +249,7 @@ public class animalController : MonoBehaviour {
         piggy.SetActive(true);
         bunny.SetActive(false);
         mouse.SetActive(false);
+        originalHeight = this.transform.position.y;
         Debug.Log(animalType);
         Debug.Log("changed to piggy");
     }
@@ -261,6 +261,7 @@ public class animalController : MonoBehaviour {
         mouse.SetActive(true);
         bunny.SetActive(false);
         piggy.SetActive(false);
+        originalHeight = this.transform.position.y;
         Debug.Log(animalType);
         Debug.Log("changed to mouse");
     }
@@ -272,6 +273,7 @@ public class animalController : MonoBehaviour {
         bunny.SetActive(true);
         piggy.SetActive(false);
         mouse.SetActive(false);
+        originalHeight = this.transform.position.y;
         Debug.Log(animalType);
         Debug.Log("changed to bunny");
     }
