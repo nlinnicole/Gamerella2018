@@ -17,7 +17,7 @@ public class animalController : MonoBehaviour {
 
     private bool isGrounded = true;
 
-    private int animalType = 0;
+    private int animalType;
     private bool isChanged = false;
     private bool isMoving = true;
     private bool isJumping = false;
@@ -32,7 +32,6 @@ public class animalController : MonoBehaviour {
 
     private int points;
 
-
     private Rigidbody rb;
 
 	// Use this for initialization
@@ -44,11 +43,11 @@ public class animalController : MonoBehaviour {
         bunny = this.gameObject.transform.GetChild(1).gameObject;
         mouse = this.gameObject.transform.GetChild(2).gameObject;
 
-        piggy.SetActive(true);
-        bunny.SetActive(false);
-        mouse.SetActive(false);
+        animalType = animalSelect.animalSelection;
+        switchAnimalType(animalType);
 
         originalHeight = transform.position.y;
+        
 	}
 	
 	// Update is called once per frame
@@ -63,8 +62,9 @@ public class animalController : MonoBehaviour {
             Move();
         }
         checkAnimalType();
-        if (transform.position.y > originalHeight)
+        if (transform.position.y + 5 > originalHeight)
         {
+            Debug.Log("is jumping");
             isJumping = true;
         } else
         {
@@ -101,7 +101,7 @@ public class animalController : MonoBehaviour {
             }
         }
 
-        
+
         if (Input.GetKeyDown(KeyCode.S))
         {
             switchAnimalType();
@@ -184,39 +184,36 @@ public class animalController : MonoBehaviour {
         }
     }
 
+    void switchAnimalType(int type)
+    {
+        if (type == 0)
+        {
+            toPiggy();
+        }
+        else if (type == 1)
+        {
+            toBunny();
+        }
+        else if (type == 2)
+        {
+            toMouse();
+        }
+        checkAnimalType();
+    }
+
     void switchAnimalType()
     {
         if (animalType == 0)
         {
-            animalType = 1;
-            this.tag = "Bunny";
-            bunny.SetActive(true);
-            piggy.SetActive(false);
-            mouse.SetActive(false);
-            Debug.Log(animalType);
-            Debug.Log("changed to bunny");
-        }
-        else if (animalType == 1)
+            toBunny();
+        } else if (animalType == 1)
         {
-            animalType = 2;
-            this.tag = "Mouse";
-            mouse.SetActive(true);
-            bunny.SetActive(false);
-            piggy.SetActive(false);
-            Debug.Log(animalType);
-            Debug.Log("changed to mouse");
+            toMouse();
         }
-        else if (animalType == 2)
+        else
         {
-            animalType = 0;
-            this.tag = "Piggy";
-            piggy.SetActive(true);
-            bunny.SetActive(false);
-            mouse.SetActive(false);
-            Debug.Log(animalType);
-            Debug.Log("changed to piggy");
+            toPiggy();
         }
-        checkAnimalType();
     }
 
     void checkAnimalType()
@@ -244,5 +241,38 @@ public class animalController : MonoBehaviour {
         this.transform.position = new Vector3(1, 1, 180);
         isMoving = true;
         isChanged = false;
+    }
+
+    public void toPiggy()
+    {
+        animalType = 0;
+        this.tag = "Piggy";
+        piggy.SetActive(true);
+        bunny.SetActive(false);
+        mouse.SetActive(false);
+        Debug.Log(animalType);
+        Debug.Log("changed to piggy");
+    }
+
+   public void toMouse()
+    {
+        animalType = 2;
+        this.tag = "Mouse";
+        mouse.SetActive(true);
+        bunny.SetActive(false);
+        piggy.SetActive(false);
+        Debug.Log(animalType);
+        Debug.Log("changed to mouse");
+    }
+
+    public void toBunny()
+    {
+        animalType = 1;
+        this.tag = "Bunny";
+        bunny.SetActive(true);
+        piggy.SetActive(false);
+        mouse.SetActive(false);
+        Debug.Log(animalType);
+        Debug.Log("changed to bunny");
     }
 }
