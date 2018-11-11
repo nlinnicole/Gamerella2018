@@ -10,9 +10,12 @@ TagManager:
   - Floor
   - Rock
   - Carrot
+<<<<<<< HEAD
+=======
   - Cheese
   - Log
   - Garbage
+>>>>>>> 4057b4e857bb18fd1efc3714f4d6765fd77f8797
   - Bush
   layers:
   - Default
